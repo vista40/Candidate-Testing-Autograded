@@ -8,9 +8,15 @@ let candidateName = input.question("Enter your name: ");
    // TODO 1.1c: Greet candidate using their name //
 console.log("Hello, "  +  candidateName + "!");
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer; 
-let candidateAnswer;
+let question = "Who was the first American woman in space? ";
+let candidateAnswer = input.question("Who was the first American woman in space? ");
+let correctAnswer = "Sally Ride";
+if (candidateAnswer == correctAnswer) {
+  console.log("That is correct!");
+} else {
+  console.log("Incorrect. Try again.");
+}
+
 
 
 //TODO: Variables for Part 2
