@@ -11,11 +11,12 @@ console.log("Hello, "  +  candidateName + "!");
 let question = "Who was the first American woman in space? ";
 let candidateAnswer = input.question("Who was the first American woman in space? ");
 let correctAnswer = "Sally Ride";
-if (candidateAnswer == correctAnswer) {
+correctAnswer = correctAnswer.toLowerCase();
+if (candidateAnswer === correctAnswer) {
   console.log("That is correct!");
 } else {
   console.log("Incorrect. Try again.");
-}
+  }
 
 
 
