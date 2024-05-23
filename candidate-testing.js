@@ -11,8 +11,8 @@ console.log("Hello, "  +  candidateName + "!");
 let question = "Who was the first American woman in space? ";
 let candidateAnswer = input.question("Who was the first American woman in space? ");
 let correctAnswer = "Sally Ride";
-correctAnswer = correctAnswer.toLowerCase();
-if (candidateAnswer === correctAnswer) {
+candidateAnswer = candidateAnswer.toUpperCase()
+if (candidateAnswer == correctAnswer) {
   console.log("That is correct!");
 } else {
   console.log("Incorrect. Try again.");
@@ -21,15 +21,27 @@ if (candidateAnswer === correctAnswer) {
 
 
 //TODO: Variables for Part 2
-let questions;
-let correctAnswers;
-let candidateAnswers;
+const questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
+const correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3" ];
+let candidateAnswers = [ ]
+
+for (let i = 0; i < questions.length; i++ ) {
+  userResponse = input.question(`Answer the following question: ${questions[i]}`);
+  console.log(`The correct answer = ${correctAnswers[i]}.\nYour answer = ${userResponse}`);
+  candidateAnswers.push(userResponse);
+}
+console.log(candidateAnswers);
+
+
+
+
 
 
 
 
 
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+
 
 
 
@@ -66,4 +78,4 @@ module.exports = {
   candidateAnswers: candidateAnswers,
   gradeQuiz: gradeQuiz,
   runProgram: runProgram
-};
+}
