@@ -49,6 +49,11 @@ function gradeQuiz(candidateAnswers) {
       }
   }  
   let grade = score * 20;
+  if (grade > 60) {
+    console.log(`You scored ${grade}%. You passed.`);
+  } else {
+    console.log(`You scored ${grade}%. You failed.`);
+  }
   return grade; 
     
 }
